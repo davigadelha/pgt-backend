@@ -1,0 +1,40 @@
+{
+  "name": "Uf",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sigla",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "usuario",
+      "otherEntityRelationshipName": "uf",
+      "javadoc": "A relationship",
+      "relationshipName": "usuario"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "municipio",
+      "otherEntityRelationshipName": "uf",
+      "relationshipName": "municipio"
+    }
+  ],
+  "changelogDate": "20210322194546",
+  "entityTableName": "uf",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "pgtBackend",
+  "applications": "*",
+  "microserviceName": "pgtBackend"
+}

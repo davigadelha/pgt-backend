@@ -1,0 +1,54 @@
+{
+  "name": "Municipio",
+  "fields": [
+    {
+      "fieldName": "codigoIbge",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "nome",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sigla",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idUf",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "codigoTom",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "area",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "areaModuloFiscal",
+      "fieldType": "BigDecimal"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "uf",
+      "otherEntityRelationshipName": "municipio",
+      "relationshipName": "uf",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210322194646",
+  "entityTableName": "municipio",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "pgtBackend",
+  "applications": "*",
+  "microserviceName": "pgtBackend"
+}

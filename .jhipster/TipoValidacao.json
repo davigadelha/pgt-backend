@@ -1,0 +1,57 @@
+{
+  "name": "TipoValidacao",
+  "fields": [
+    {
+      "fieldName": "codigo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "descricao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "categoria",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idUf",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "icImpeditivo",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "icAtivo",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "resultadoValidacao",
+      "otherEntityRelationshipName": "tipoValidacao",
+      "relationshipName": "resultadoValidacao"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "categoriaTipoValidacao",
+      "otherEntityRelationshipName": "tipoValidacao",
+      "javadoc": "Another side of the same relationship",
+      "relationshipName": "categoriaTipoValidacao",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210322194746",
+  "entityTableName": "tipo_validacao",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "pgtBackend",
+  "applications": "*",
+  "microserviceName": "pgtBackend"
+}

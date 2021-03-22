@@ -1,0 +1,60 @@
+{
+  "name": "Usuario",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idPerfil",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idUf",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "cpfCnpj",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "icAtivo",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "solicitacao",
+      "otherEntityRelationshipName": "usuario",
+      "relationshipName": "solicitacao"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "perfil",
+      "otherEntityRelationshipName": "usuario",
+      "relationshipName": "perfil",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "uf",
+      "otherEntityRelationshipName": "usuario",
+      "javadoc": "Another side of the same relationship",
+      "relationshipName": "uf",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210322194246",
+  "entityTableName": "usuario",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "pgtBackend",
+  "applications": "*",
+  "microserviceName": "pgtBackend"
+}

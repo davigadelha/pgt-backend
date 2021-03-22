@@ -1,0 +1,34 @@
+{
+  "name": "CategoriaTipoValidacao",
+  "fields": [
+    {
+      "fieldName": "codigo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "descricao",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "tipoValidacao",
+      "otherEntityRelationshipName": "categoriaTipoValidacao",
+      "javadoc": "A relationship",
+      "relationshipName": "tipoValidacao"
+    }
+  ],
+  "changelogDate": "20210322194846",
+  "entityTableName": "categoria_tipo_validacao",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "pgtBackend",
+  "applications": "*",
+  "microserviceName": "pgtBackend"
+}

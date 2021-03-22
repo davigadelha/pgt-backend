@@ -1,0 +1,132 @@
+
+entity Funcionalidade {
+	id Long,
+	nome String
+}
+
+entity Perfil {
+	id Long,
+	nome String
+}
+
+entity Usuario {
+	id Long,
+	nome String,
+    idPerfil Long,
+    idUf Long,
+    cpfCnpj String,
+    icAtivo Boolean
+}
+
+entity Solicitacao {
+	id Long,
+	idUsuarioIncra Long,
+    cpfCnpjSolicitante String,
+    dataSolicitacao Instant,
+    situacao String,
+    conteudo String,
+    protocolo String
+}
+
+entity ResultadoValidacao {
+	id Long,
+	idTipoValidacao Long,
+    idSolicitacao Long,
+    dataValidacao Instant,
+    resultado String,
+    situacao String,
+    resultadoParecer String,
+    idUsuarioIncra Long,
+    dataParecer Instant
+}
+
+entity Uf {
+	id Long,
+	nome String,
+    sigla String
+}
+
+entity Municipio {
+	id Long,
+    codigoIbge Long,
+	nome String,
+    sigla String,    
+    idUf Long,
+    codigoTom Long,
+    area BigDecimal,
+    areaModuloFiscal BigDecimal
+}
+
+entity TipoValidacao {
+	id Long,
+    codigo String,
+	descricao String,
+    categoria String,    
+    idUf Long,
+    icImpeditivo Boolean,
+    icAtivo Boolean
+}
+
+entity CategoriaTipoValidacao {
+	id Long,
+    codigo String,
+	descricao String
+}
+
+relationship OneToOne {
+	Solicitacao{idSolicitacao} to ResultadoValidacao
+}
+
+relationship OneToMany {
+	Usuario to Solicitacao{usuario}
+}
+
+relationship ManyToMany {
+	Perfil{funcionalidade(id)} to Funcionalidade{perfil}
+}
+
+relationship OneToMany {
+	Perfil to Usuario{perfil},
+	/**
+	* A relationship
+	*/
+	Uf to
+	/**
+	* Another side of the same relationship
+	*/
+	Usuario{uf}
+}
+
+relationship OneToMany {
+	Uf to Municipio{uf},
+	/**
+	* A relationship
+	*/
+	Uf to
+	/**
+	* Another side of the same relationship
+	*/
+	Usuario{uf}
+}
+
+relationship OneToMany {
+	TipoValidacao to ResultadoValidacao{tipoValidacao}
+    /**
+	* A relationship
+	*/
+	CategoriaTipoValidacao to
+	/**
+	* Another side of the same relationship
+	*/
+	TipoValidacao{categoriaTipoValidacao}
+}
+
+
+// Use Data Transfer Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl except TipoValidacao, Municipio, Uf
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
