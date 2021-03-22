@@ -14,7 +14,22 @@
     <property name="uuidType" value="uuid" dbms="h2, postgresql"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210322194046_added_entity_Funcionalidade.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210322194146_added_entity_Perfil.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210322194246_added_entity_Usuario.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210322194346_added_entity_Solicitacao.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210322194446_added_entity_ResultadoValidacao.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210322194546_added_entity_Uf.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210322194646_added_entity_Municipio.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210322194746_added_entity_TipoValidacao.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210322194846_added_entity_CategoriaTipoValidacao.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20210322194146_added_entity_constraints_Perfil.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210322194246_added_entity_constraints_Usuario.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210322194346_added_entity_constraints_Solicitacao.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210322194446_added_entity_constraints_ResultadoValidacao.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210322194646_added_entity_constraints_Municipio.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210322194746_added_entity_constraints_TipoValidacao.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

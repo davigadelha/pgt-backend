@@ -1,0 +1,58 @@
+{
+  "name": "ResultadoValidacao",
+  "fields": [
+    {
+      "fieldName": "idTipoValidacao",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idSolicitacao",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "dataValidacao",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "resultado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "situacao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "resultadoParecer",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idUsuarioIncra",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "dataParecer",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "tipoValidacao",
+      "otherEntityRelationshipName": "resultadoValidacao",
+      "relationshipName": "tipoValidacao",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210322194446",
+  "entityTableName": "resultado_validacao",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "pgtBackend",
+  "applications": "*",
+  "microserviceName": "pgtBackend"
+}

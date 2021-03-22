@@ -1,0 +1,37 @@
+{
+  "name": "Perfil",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "usuario",
+      "otherEntityRelationshipName": "perfil",
+      "relationshipName": "usuario"
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "funcionalidade",
+      "otherEntityRelationshipName": "perfil",
+      "relationshipName": "funcionalidade",
+      "otherEntityField": "id",
+      "ownerSide": true
+    }
+  ],
+  "changelogDate": "20210322194146",
+  "entityTableName": "perfil",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "pgtBackend",
+  "applications": "*",
+  "microserviceName": "pgtBackend"
+}

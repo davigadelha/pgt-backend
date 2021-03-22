@@ -1,0 +1,58 @@
+{
+  "name": "Solicitacao",
+  "fields": [
+    {
+      "fieldName": "idUsuarioIncra",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "cpfCnpjSolicitante",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dataSolicitacao",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "situacao",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "conteudo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "protocolo",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "resultadoValidacao",
+      "otherEntityRelationshipName": "solicitacao",
+      "relationshipName": "idSolicitacao",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "usuario",
+      "otherEntityRelationshipName": "solicitacao",
+      "relationshipName": "usuario",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210322194346",
+  "entityTableName": "solicitacao",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "pgtBackend",
+  "applications": "*",
+  "microserviceName": "pgtBackend"
+}
